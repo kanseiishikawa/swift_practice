@@ -18,6 +18,8 @@ struct block_data: Identifiable {
     var text:String
 }
 
+var word_size =  0
+
 func data_set() -> ( [block_data] ){
     var all_data: [block_data] = []
     let display_size = UIScreen.main.bounds.size
@@ -67,13 +69,13 @@ func data_set() -> ( [block_data] ){
         all_data.append( bd )
     }
     
-    //let str_list: Array<String> = Array( repeating: "", count: all_data.count )
+    word_size = all_data.count
     return ( all_data )
 }
 
 struct ContentView: View {
     @State var data = data_set()
-    @State var aa = "w"
+    @State var word_list: Array<String> = Array( repeating: "", count: word_size )
     
     var body: some View {
         VStack( alignment: .leading, spacing: 0 ) {
@@ -81,7 +83,7 @@ struct ContentView: View {
                 ForEach( data ) {
                     d in
                     if d.id < 3{
-                        TextField( "aa", text: self.$aa)
+                        TextField( "aa", text: self.$word_list[d.id])
                             .frame(width: d.width, height: d.height )
                             .background( d.color )
                             .offset( x: 0, y: -200 )
@@ -93,7 +95,7 @@ struct ContentView: View {
                 ForEach( data ) {
                     d in
                     if d.id < 7 && 2 < d.id {
-                        TextField( "aa", text: self.$aa )
+                        TextField( "aa", text: self.$word_list[d.id] )
                         .frame(width: d.width, height: d.height )
                         .background( d.color )
                         .offset( x: 0, y: -200 )
@@ -105,7 +107,7 @@ struct ContentView: View {
                 ForEach( data ) {
                     d in
                     if 6 < d.id {
-                        TextField( "aa", text: self.$aa )
+                        TextField( "aa", text: self.$word_list[d.id] )
                         .frame(width: d.width, height: d.height )
                         .background( d.color )
                         .offset( x: 0, y: -200 )
