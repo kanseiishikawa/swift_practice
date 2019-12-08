@@ -1,0 +1,442 @@
+[
+  {
+    "cross": {
+      "Start_Point": {
+        "X": -1,
+        "Y": -1
+      },
+      "Width": 0,
+      "Height": 0,
+      "Area": 0
+    },
+    "text_area_rate": 0,
+    "text": [
+      "ケアコン",
+      "別紙3",
+      "月 日( )",
+      "年",
+      "業務,出張,会議等 報告(日報)",
+      "平成"
+    ]
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 0,
+        "Y": 0
+      },
+      "Width": 379,
+      "Height": 196,
+      "Area": 74284
+    },
+    "text_area_rate": 0.33835012,
+    "text": [
+      "氏名",
+      "從事者、講師等"
+    ]
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 1,
+        "Y": 0
+      },
+      "Width": 344,
+      "Height": 196,
+      "Area": 67424
+    },
+    "text_area_rate": 0.19601329,
+    "text": [
+      "從事時間"
+    ]
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 2,
+        "Y": 0
+      },
+      "Width": 443,
+      "Height": 196,
+      "Area": 86828
+    },
+    "text_area_rate": 0.13744414,
+    "text": [
+      "従事場所"
+    ]
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 3,
+        "Y": 0
+      },
+      "Width": 439,
+      "Height": 196,
+      "Area": 86044
+    },
+    "text_area_rate": 0.20225698,
+    "text": [
+      "行程",
+      "(出張の場合)"
+    ]
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 4,
+        "Y": 0
+      },
+      "Width": 830,
+      "Height": 196,
+      "Area": 162680
+    },
+    "text_area_rate": 0.41032702,
+    "text": [
+      "業務内容(個人別)。",
+      "(出張の場合)も記入",
+      "宿泊施設名"
+    ]
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 0,
+        "Y": 1
+      },
+      "Width": 379,
+      "Height": 180,
+      "Area": 68220
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 1,
+        "Y": 1
+      },
+      "Width": 344,
+      "Height": 180,
+      "Area": 61920
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 2,
+        "Y": 1
+      },
+      "Width": 443,
+      "Height": 180,
+      "Area": 79740
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 3,
+        "Y": 1
+      },
+      "Width": 439,
+      "Height": 180,
+      "Area": 79020
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 4,
+        "Y": 1
+      },
+      "Width": 830,
+      "Height": 180,
+      "Area": 149400
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 0,
+        "Y": 2
+      },
+      "Width": 379,
+      "Height": 178,
+      "Area": 67462
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 1,
+        "Y": 2
+      },
+      "Width": 344,
+      "Height": 178,
+      "Area": 61232
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 2,
+        "Y": 2
+      },
+      "Width": 443,
+      "Height": 178,
+      "Area": 78854
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 3,
+        "Y": 2
+      },
+      "Width": 439,
+      "Height": 178,
+      "Area": 78142
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 4,
+        "Y": 2
+      },
+      "Width": 830,
+      "Height": 178,
+      "Area": 147740
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 0,
+        "Y": 3
+      },
+      "Width": 379,
+      "Height": 178,
+      "Area": 67462
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 1,
+        "Y": 3
+      },
+      "Width": 344,
+      "Height": 178,
+      "Area": 61232
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 2,
+        "Y": 3
+      },
+      "Width": 443,
+      "Height": 178,
+      "Area": 78854
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 3,
+        "Y": 3
+      },
+      "Width": 439,
+      "Height": 178,
+      "Area": 78142
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 4,
+        "Y": 3
+      },
+      "Width": 830,
+      "Height": 178,
+      "Area": 147740
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 0,
+        "Y": 4
+      },
+      "Width": 379,
+      "Height": 161,
+      "Area": 61019
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 1,
+        "Y": 4
+      },
+      "Width": 344,
+      "Height": 161,
+      "Area": 55384
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 2,
+        "Y": 4
+      },
+      "Width": 443,
+      "Height": 161,
+      "Area": 71323
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 3,
+        "Y": 4
+      },
+      "Width": 439,
+      "Height": 161,
+      "Area": 70679
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 4,
+        "Y": 4
+      },
+      "Width": 830,
+      "Height": 161,
+      "Area": 133630
+    },
+    "text_area_rate": 0,
+    "text": null
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 0,
+        "Y": 5
+      },
+      "Width": 656,
+      "Height": 192,
+      "Area": 125952
+    },
+    "text_area_rate": 0.20482406,
+    "text": [
+      "確認者(社内)",
+      "署名"
+    ]
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 1,
+        "Y": 5
+      },
+      "Width": 1779,
+      "Height": 192,
+      "Area": 341568
+    },
+    "text_area_rate": 0.023453603,
+    "text": [
+      "印",
+      "氏名"
+    ]
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 0,
+        "Y": 6
+      },
+      "Width": 656,
+      "Height": 178,
+      "Area": 116768
+    },
+    "text_area_rate": 0.2735424,
+    "text": [
+      "外部専門家等",
+      "署名"
+    ]
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 1,
+        "Y": 6
+      },
+      "Width": 1779,
+      "Height": 178,
+      "Area": 316662
+    },
+    "text_area_rate": 0.038299512,
+    "text": [
+      "印",
+      "|氏名"
+    ]
+  },
+  {
+    "cross": {
+      "Start_Point": {
+        "X": 0,
+        "Y": 7
+      },
+      "Width": 2435,
+      "Height": 1875,
+      "Area": 4565625
+    },
+    "text_area_rate": 0.017051553,
+    "text": [
+      "業務内容",
+      "(全体の内容。なお上記以外の参加者は、",
+      "ここに記入)"
+    ]
+  }
+]
