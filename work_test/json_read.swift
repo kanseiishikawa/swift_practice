@@ -13,15 +13,20 @@ struct cross:Codable {
     var Area: Int
 }
 
+struct text_result: Codable {
+    var Text: String
+    var Pos: Start_Point
+}
+
 struct img_data :Codable {
     var cross: cross
     var text_area_rate: Float
-    var text: [String]?
+    var text: [text_result]?
 }
 
 func getJSON() -> [img_data] {
     //let fileName = "img_test.json"
-    let path = Bundle.main.path(forResource: "img_test", ofType: "json" )!
+    let path = Bundle.main.path(forResource: "img_data", ofType: "json" )!
     // ファイルを読み込みモードで開く
     let file = FileHandle(forReadingAtPath: path )!
     let data = file.readDataToEndOfFile()

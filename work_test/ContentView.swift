@@ -7,119 +7,117 @@
 //
 
 import SwiftUI
+import Combine
 
-struct block_data: Identifiable {
-    var id:Int
-    var width:CGFloat//横
-    var height:CGFloat//縦
-    var w_num:Int
-    var h_num:Int
-    var color:Color
-    var text:String
+struct block_view: View {
+    var re: [block_result]
+    let font_size: CGFloat = 8
+    @State var aaa: String = ""
+    @State var text_storage: [String]
+    
+    var body: some View {
+        HStack( spacing: 0 ){
+            ForEach( re ) {
+                d in
+                if d.write {
+                    ZStack{
+      
+                        MultilineTextField( text: self.$aaa, top: 0, left: 0, bottom: 0, right: 0 )
+                        .frame( width: d.width, height: d.height )
+                        .border( Color.red )
+                        
+                        if d.text.count != 0 {
+                            ForEach( d.text ){
+                                t in
+                                Text( t.text )
+                                .font( Font.system( size: self.font_size ) )
+                                .offset( x: t.of_x, y: t.of_y )
+                            }
+                        }
+                    }
+                } else {
+                    ZStack{
+                    Text( "" )
+                    .frame( width: d.width, height: d.height )
+                    .border( Color.blue )
+                        
+                        VStack{
+                        ForEach( d.text ){
+                            t in
+                            Text( /*t.of_x.description*/ t.text )
+                                .font( Font.system(size: self.font_size ) )
+                            //.offset(x: t.of_x, y: t.of_y )
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-var word_size =  0
+struct MultilineTextField: UIViewRepresentable {
+    @Binding var text: String
+    @State var top: CGFloat = 0
+    @State var left: CGFloat = 0
+    @State var bottom: CGFloat = 0
+    @State var right: CGFloat = 0
+    
+    func makeUIView(context: Context) -> UITextView {
+        let view = UITextView()
+        view.delegate = context.coordinator
+        view.isScrollEnabled = true
+        view.isEditable = true
+        view.isUserInteractionEnabled = true
+        //let rabius = view.layer.cornerRadius / 4
+        view.textContainerInset = UIEdgeInsets(top: self.top, left: self.left, bottom: self.bottom, right: self.right )
+        view.font = UIFont.systemFont(ofSize: 15 )
+        return view
+    }
 
-func data_set() -> ( [block_data] ){
-    var all_data: [block_data] = []
-    let display_size = UIScreen.main.bounds.size
-    var w_size = ( display_size.width - 40 ) / 3
-    var h_size = ( display_size.height - 40 ) / 10
-    
-    for i in 0..<3 {
-        var c: Color
-        if i % 2 == 0 {
-            c = Color.yellow
-        } else {
-            c = Color.green
-        }
-        
-        let bd = block_data( id: i, width: w_size, height: h_size, w_num: i, h_num: 0, color: c, text: "" )
-        all_data.append( bd )
+    func updateUIView(_ uiView: UITextView, context: Context) {
+        uiView.text = text
+    }
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
     }
     
-    w_size = ( display_size.width - 40 ) / 4
-    h_size = ( display_size.height - 40 ) / 20
-    
-    for i in 3..<7 {
-        var c: Color
-        if i % 2 == 0 {
-            c = Color.yellow
-        } else {
-            c = Color.green
+    class Coordinator : NSObject, UITextViewDelegate {
+
+        var parent: MultilineTextField
+
+        init(_ textView: MultilineTextField) {
+            self.parent = textView
         }
-        
-        let bd = block_data( id: i, width: w_size, height: h_size, w_num: i, h_num: 0, color: c, text: "" )
-        all_data.append( bd )
-    }
-    
-    w_size = ( display_size.width - 40 ) / 2
-    h_size = ( display_size.height - 40 ) / 8
-    
-    for i in 7..<9 {
-        var c: Color
-        if i % 2 == 0 {
-            c = Color.yellow
-        } else {
-            c = Color.green
+
+        func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+            return true
         }
-        
-        let bd = block_data( id: i, width: w_size, height: h_size, w_num: i, h_num: 0, color: c, text: "" )
-        
-        all_data.append( bd )
+
+        func textViewDidChange(_ textView: UITextView) {
+            self.parent.text = textView.text
+        }
     }
-    
-    word_size = all_data.count
-    return ( all_data )
+
 }
 
 struct ContentView: View {
-    @State var data = data_set()
-    @State var word_list: Array<String> = Array( repeating: "", count: word_size )
+    @State var block = data_analyze()
     
     var body: some View {
         VStack( alignment: .leading, spacing: 0 ) {
-            HStack( spacing: CGFloat( 0 ) ){
-                ForEach( data ) {
-                    d in
-                    if d.id < 3{
-                        TextField( "aa", text: self.$word_list[d.id])
-                            .frame(width: d.width, height: d.height )
-                            .background( d.color )
-                            .offset( x: 0, y: -200 )
-                    }
-                }
-            }
-            
-            HStack( spacing: CGFloat( 0 ) ){
-                ForEach( data ) {
-                    d in
-                    if d.id < 7 && 2 < d.id {
-                        TextField( "aa", text: self.$word_list[d.id] )
-                        .frame(width: d.width, height: d.height )
-                        .background( d.color )
-                        .offset( x: 0, y: -200 )
-                    }
-                }
-            }
-            
-            HStack( spacing: CGFloat( 0 ) ){
-                ForEach( data ) {
-                    d in
-                    if 6 < d.id {
-                        TextField( "aa", text: self.$word_list[d.id] )
-                        .frame(width: d.width, height: d.height )
-                        .background( d.color )
-                        .offset( x: 0, y: -200 )
-                    }
-                }
+            ForEach( 0..<self.block.data.count ) {
+                i in
+                block_view( re: self.block.data[i], text_storage: self.block.storage[i] )
             }
         }
     }
 }
-
+   
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
